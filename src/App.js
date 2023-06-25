@@ -9,20 +9,32 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Nome do herói: {name ? name : "-"}
-        </p>
-        {img ? 
-            <img style={{ borderRadius: '100%', width: 300, height: 300, marginBottom: 10 }} src={img} alt="hero" />
-          : 
-            "Sem imagem por enquanto"
-        }
-        <p>
-          Descrição: {desc ? desc : "-"}
-        </p>
-        <button onClick={() => testandoAPI(setImg, setName, setDesc)}>
-          CARREGAR INFOS
-        </button>
+        <div>
+          <input 
+            name="nameHero" 
+            value={name} 
+            onChange={e => setName(e.target.value)}
+          />
+          <button onClick={() => testandoAPI(name, setImg, setName, setDesc)}>
+            CARREGAR INFOS
+          </button>
+        </div>
+
+        <div style={{border: 'solid', borderRadius: '5px', borderWidth: '1px', borderColor:'grey', display: 'flex', marginTop: '10px', alignItems: 'center', flexDirection: 'row', height: '300px', width: '90%', padding: '15px'}}>
+          {img ? 
+              <img style={{ borderRadius: '100%', width: 200, height: 200, marginRight: '30px' }} src={img} alt="hero" />
+            : 
+              <div style={{ backgroundColor: 'lightgray', borderRadius: '100%', width: 200, height: 200, marginRight: '30px' }} />
+          }
+          <div>
+            <p style={{fontSize: '15px'}}>
+              Hero: {name ? name : "-"}
+            </p>
+            <p style={{fontSize: '15px'}}>
+              {desc ? desc : "-"}
+            </p>
+          </div>
+        </div>
       </header>
     </div>
   );

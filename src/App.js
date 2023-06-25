@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { useState } from 'react'
+import {testandoAPI} from './api'
 
 function App() {
+  const [img, setImg] = useState()
+  const [name, setName] = useState()
+  const [desc, setDesc] = useState()
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Nome do herói: {name ? name : "-"}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {img ? 
+            <img style={{ borderRadius: '100%', width: 300, height: 300, marginBottom: 10 }} src={img} alt="hero" />
+          : 
+            "Sem imagem por enquanto"
+        }
+        <p>
+          Descrição: {desc ? desc : "-"}
+        </p>
+        <button onClick={() => testandoAPI(setImg, setName, setDesc)}>
+          CARREGAR INFOS
+        </button>
       </header>
     </div>
   );
 }
 
-export default App;
+export default App

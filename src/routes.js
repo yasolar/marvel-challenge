@@ -7,6 +7,7 @@ import HeroDetails from "../src/pages/hero-details"
 const Routess = () => {
    return(
     <BrowserRouter>
+        <div style={{fontSize:'30px', fontWeight: 'bold', backgroundColor: 'lightgrey', paddingLeft: '10px',height: '70px', justifyContent: 'center', display: "flex", flexDirection: 'column'}}>MARVEL CHALLENGE</div>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="HeroList/" element={<HeroList />} />

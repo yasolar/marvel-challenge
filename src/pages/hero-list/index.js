@@ -14,7 +14,7 @@ export default function HeroList() {
     }
 
     const toHeroDetails = (img, name, desc) => {
-        navigate('/HeroDetails', {state: { img: img, name: name, desc: desc }})
+        navigate('/HeroDetails', {state: { img, name, desc }})
     }
 
     return (

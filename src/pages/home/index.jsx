@@ -22,7 +22,7 @@ export default function Home() {
         <div>
             <div style={{display: 'flex', flexWrap: 'wrap', height: '100vh', justifyContent: 'center'}}>
                 <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', paddingInline: '80px'}}>
-                    <div style={{width: '380px', fontSize: '20px'}}>Conheça um pouco mais dos personagens da Marvel e encontre informações sobre cada herói e vilão</div>
+                    <div style={{width: '410px', fontSize: '20px'}}>Conheça um pouco mais dos personagens da Marvel e encontre informações sobre cada herói e vilão</div>
                     <div>
                         <input
                             value={name} 

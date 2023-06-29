@@ -1,7 +1,9 @@
-import { endpoint } from './endpoint'
+import Endpoint from './endpoint'
 
 export async function GetHeros(name, setInfos) {
-    const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}${endpoint}`
+    const endp = Endpoint()
+    const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}${endp}`
+    
     fetch(url)
         .then(response => response.json())
         .then(data => {

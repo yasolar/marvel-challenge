@@ -1,6 +1,6 @@
 <h1 align="center"> MARVEL CHALLENGE </h1>
 
-### 📋 Descrição do Projeto
+### 📋 Descrição do projeto
 <p>Aplicativo que permite procurar pelo nome dos heróis e vilões da Marvel.</p>
 
 ##

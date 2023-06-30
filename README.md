@@ -1,7 +1,7 @@
 <h1 align="center"> MARVEL CHALLENGE </h1>
 
 ### 📋 Descrição do projeto
-<p>Aplicativo que permite procurar pelo nome dos heróis e vilões da Marvel.</p>
+<p>Projeto que permite procurar pelo nome dos heróis e vilões da Marvel, conhecendo um pouco mais sobre cada um deles.</p>
 
 ##
 ### 💿 Instalação

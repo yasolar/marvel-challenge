@@ -27,12 +27,13 @@ import {
 
 
 export default function Home() {
+    const {setIsLoading} = useContext(HerosContext)
     const {name, setName} = useContext(HerosContext)
     const {setInfos} = useContext(HerosContext)
     const navigate = useNavigate()
     
     const toHeroList = () => {
-        GetHeros(name, setInfos)
+        GetHeros(name, setInfos, setIsLoading)
         navigate('/HeroList')
     }
 
@@ -49,7 +50,7 @@ export default function Home() {
                 </TextContainer>
 
                 <SearchContainer>
-                    <SearchInput value={name} onChange={e => setName(e.target.value)} />
+                    <SearchInput value={name} onChange={e => setName(e.target.value)} placeholder='Digite o nome do(a) personagem' />
                     <SearchButton onClick={() => toHeroList()}>
                         BUSCAR
                     </SearchButton>

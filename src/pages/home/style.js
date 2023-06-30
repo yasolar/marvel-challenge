@@ -56,10 +56,10 @@ export const CircleSpan = styled.span`
 `;
 
 export const WelcomeText = styled.div`
-	position: relative;
-	z-index: 1;
-	font-weight: bold;
 	width: 410px;
+	z-index: 1;
+	position: relative;
+	font-weight: bold;
 	font-size: 20px;
 	margin-bottom: 100px;
 `;
@@ -70,16 +70,16 @@ export const SearchContainer = styled.div`
 `;
 
 export const SearchInput = styled.input`
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
-	border-width: 0.1px; 
 	height: 45px;
 	width: 300px; 
-	font-size: 14px; 
-	padding-top: 0px; 
-	padding-bottom: 0px; 
+	border-width: 0.1px; 
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
 	padding-left: 20px; 
 	padding-right: 10px;
+	padding-bottom: 0px; 
+	padding-top: 0px; 
+	font-size: 14px; 
 `;
 
 export const SearchButton = styled.button`
@@ -102,8 +102,8 @@ export const SideBContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	overflow: hidden;
-	position: relative;
 	width: 600px;
+	position: relative;
 	background-color: rgba(236, 29, 36, 0.8);
 `;
 

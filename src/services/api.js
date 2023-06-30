@@ -1,6 +1,6 @@
 import Endpoint from './endpoint'
 
-export async function GetHeros(name, setInfos) {
+export async function GetHeros(name, setInfos, setIsLoading) {
     const endp = Endpoint()
     const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}${endp}`
     
@@ -10,6 +10,7 @@ export async function GetHeros(name, setInfos) {
             console.log('INFOS DATA: ', data.data.results)
             const infos = data.data.results
             setInfos(infos)
+            setIsLoading(false)
         })
         .catch(error => {
             console.error('Ocorreu um erro:', error)

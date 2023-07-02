@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { HerosContext } from '../../store/contexts'
+import { FaAngleLeft } from "react-icons/fa6"
 import BackButton from '../../components/backButton'
 import Header from '../../components/header'
 import CardHero from '../../components/cardHero'
@@ -22,7 +23,10 @@ export default function HeroList() {
     return (
         <>
             <Header>
-                <BackButton icon={''} text={'Voltar'} onClick={toHome} />
+                <BackButton onClick={() => toHome()}>
+                    <FaAngleLeft />
+                    Voltar
+                </BackButton>
                 
                 <TitleContainer>
                     Veja os resultados da sua pesquisa sobre "{name}"

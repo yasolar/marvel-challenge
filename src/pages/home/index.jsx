@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GetHeros } from '../../services/api'
 import { HerosContext } from '../../store/contexts'
+import { FaMagnifyingGlass } from 'react-icons/fa6'
 import Avengers from '../../assets/Avengers.png'
 import Spider from '../../assets/Spiderverse.png'
 import Panther from '../../assets/Panther.png'
@@ -16,6 +17,7 @@ import {
     SearchContainer,
     SearchInput,
     SearchBtn,
+    SearchText,
     SideBContainer,
     FirstImage,
     SecondImage,
@@ -27,11 +29,11 @@ import {
 
 
 export default function Home() {
-    const {setIsLoading} = useContext(HerosContext)
-    const {name, setName} = useContext(HerosContext)
-    const {setInfos} = useContext(HerosContext)
+    const { setIsLoading } = useContext(HerosContext)
+    const { name, setName } = useContext(HerosContext)
+    const { setInfos } = useContext(HerosContext)
     const navigate = useNavigate()
-    
+
     const toHeroList = () => {
         GetHeros(name, setInfos, setIsLoading)
         navigate('/HeroList')
@@ -50,13 +52,22 @@ export default function Home() {
                 </TextContainer>
 
                 <SearchContainer>
-                    <SearchInput value={name} onChange={e => setName(e.target.value)} placeholder='Digite o nome do(a) personagem' />
+                    <SearchInput
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                        onKeyDown={e => e.key === 'Enter' ? toHeroList() : false}
+                        placeholder='Digite o nome do(a) personagem'
+                    />
+
                     <SearchBtn onClick={() => toHeroList()}>
-                        Buscar
+                        <SearchText>
+                            <FaMagnifyingGlass />
+                            Buscar
+                        </SearchText>
                     </SearchBtn>
                 </SearchContainer>
             </SideAContainer>
-            
+
             <SideBContainer>
                 <FirstImage src={Avengers} alt="Avengers" />
                 <SecondImage src={Spider} alt="Spider" />

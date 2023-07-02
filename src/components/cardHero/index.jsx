@@ -14,6 +14,18 @@ import {
 export default function CardHero({ infos, titleDetails, route }) {
     const navigate = useNavigate()
 
+    const sortByDescription = (a, b) => {
+        a.description = a.description.replace(' ', '')
+        b.description = b.description.replace(' ', '')
+        if (a.description && !b.description) {
+          return -1;
+        } else if (!a.description && b.description) {
+          return 1;
+        } else {
+          return 0;
+        }
+      };
+
     const toRoute = (thumb, name, desc, urls, route) => {
         let img = ''
         let links = []
@@ -60,7 +72,7 @@ export default function CardHero({ infos, titleDetails, route }) {
     return (
         <HerosContainer>
             {infos ?
-                infos.map(info =>
+                infos.sort(sortByDescription).map(info =>
                     <HeroContainer key={info.id ? info.id : info.name}>
                         <InfosContainer>
                             <HeroImg src={info.thumbnail && !info.thumbnail.path.includes('image_not_available') ? `${info.thumbnail.path}.${info.thumbnail.extension}` : ProfileSpider} alt={''} />

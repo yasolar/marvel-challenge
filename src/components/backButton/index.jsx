@@ -1,14 +1,15 @@
 import React from 'react'
 import {
     BackBtn,
-    BackIcon,
+    IconContainer,
 } from './style'
 
-export default function BackButton({ onClick, text, secondary }) {
+export default function BackButton({ onClick, secondary, children }) {
     return (
         <BackBtn secondary={secondary} onClick={onClick}>
-            <BackIcon>&lt;</BackIcon>
-            {text}
+            <IconContainer>
+                {children}
+            </IconContainer>
         </BackBtn>
     )
 }

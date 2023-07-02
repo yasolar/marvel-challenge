@@ -85,14 +85,21 @@ export const SearchInput = styled.input`
 export const SearchBtn = styled.button`
 	cursor: pointer;
 	height: 100%;
-	width:100px; 
-	color: #fff;
-	font-weight: bold;
+	width: 110px;
 	border-width: 0.1px;
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
 	border-color: rgba(236, 29, 36, 0.8);
 	background-color: rgba(236, 29, 36, 0.8);
+`;
+
+export const SearchText = styled.div`
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
 `;
 
 export const SideBContainer = styled.div` 

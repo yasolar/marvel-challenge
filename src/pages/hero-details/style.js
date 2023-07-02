@@ -10,7 +10,7 @@ export const HeroContainer = styled.div`
     margin-inline: 40px;
     margin-bottom: 20px;
     border: 1px solid grey;
-    border-radius: 4px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -38,6 +38,7 @@ export const HeroImg = styled.img`
 export const NameContainer = styled.div`
     font-size: 20px;
     text-align: center;
+    font-weight: bold;
 `;
 
 export const DescContainer = styled.div`

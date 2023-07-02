@@ -11,12 +11,12 @@ export const HeroContainer = styled.div`
     margin-left: 20px;
     margin-bottom: 20px;
     border: 1px solid grey;
-    border-radius: 4px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    height: 150px;
+    height: 160px;
     width: 200px;
 `;
 
@@ -31,9 +31,9 @@ export const InfosContainer = styled.div`
 export const HeroImg = styled.img`
     background-color: lightgray;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
 `;
 
 export const HeroDiv = styled.div`
@@ -46,6 +46,7 @@ export const HeroDiv = styled.div`
 
 export const NameContainer = styled.div`
     font-size: 13px;
+    font-weight: bold;
     text-align: center;
 `;
 

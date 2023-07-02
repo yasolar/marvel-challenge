@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { HerosContext } from '../../store/contexts'
+import { FaAngleLeft, FaHouse } from "react-icons/fa6"
 import BackButton from '../../components/backButton'
 import Header from '../../components/header'
 import {
@@ -39,9 +40,15 @@ export default function HeroDetails() {
 
     return (
         <>  <Header>
-                <BackButton icon={''} text={'Voltar'} onClick={() => toHeroList()} />
+                <BackButton onClick={() => toHeroList()}>
+                    <FaAngleLeft />
+                    Voltar
+                </BackButton>
 
-                <BackButton secondary icon={''} text={'Home'} onClick={() => toHome()} />
+                <BackButton secondary onClick={() => toHome()}>
+                    <FaHouse />
+                    Home
+                </BackButton>
             </Header>
 
             <HerosContainer>

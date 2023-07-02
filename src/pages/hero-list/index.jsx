@@ -22,9 +22,8 @@ export default function HeroList() {
     return (
         <>
             <Header>
-                <BackButton onClick={toHome}>
-                    Voltar
-                </BackButton>
+                <BackButton icon={''} text={'Voltar'} onClick={toHome} />
+                
                 <TitleContainer>
                     Veja os resultados da sua pesquisa sobre "{name}"
                 </TitleContainer>

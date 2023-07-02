@@ -16,7 +16,7 @@ export default function CardHero({ infos, titleDetails, route }) {
 
     const toRoute = (thumb, name, desc, urls, route) => {
         let img = ''
-        let url = ''
+        let links = []
         
         if (thumb && !thumb.path.includes('image_not_available')) {
             img = `${thumb.path}.${thumb.extension}`
@@ -26,26 +26,35 @@ export default function CardHero({ infos, titleDetails, route }) {
 
         if (urls) {
             urls.forEach((item) => {
-                switch (item.type) {
-                    case "detail":
-                        url = item.url
-                        break;
-                    case "comiclink":
-                        url = item.url
-                        break;
-                    case "wiki":
-                        url = item.url
-                        break;
-                    default:
-                        url = `https://www.google.com/search?q=${name}+marvel`
-                        break;
+                if (item.type === 'comiclink') {
+                    links.push({
+                        type: 'comiclink',
+                        text: 'Acesse os quadrinhos',
+                        url: item.url
+                    })
+                } else if (item.type === 'detail') {
+                    links.push({
+                        type: 'detail',
+                        text: 'Acesse mais detalhes',
+                        url: item.url
+                    })
+                } else if (item.type === 'wiki') {
+                    links.push({
+                        type: 'wiki',
+                        text: 'Acesse a Wiki',
+                        url: item.url
+                    })
                 }
-            });
+            })
         } else {
-            url = `https://www.google.com/search?q=${name}+marvel`
+            links.push({
+                type: 'other',
+                text: 'Acesse outras informações',
+                url: `https://www.google.com/search?q=${name}+marvel`
+            })
         }
 
-        navigate(`${route}`, { state: { img, name, desc, url } })
+        navigate(`${route}`, { state: { img, name, desc, links } })
     }
 
     return (

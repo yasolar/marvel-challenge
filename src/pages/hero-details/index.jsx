@@ -11,6 +11,7 @@ import {
     NameContainer,
     DescContainer,
     DetailsContainer,
+    DetailsLink,
 } from './style'
 
 
@@ -38,13 +39,9 @@ export default function HeroDetails() {
 
     return (
         <>  <Header>
-                <BackButton onClick={() => toHeroList()}>
-                    VOLTAR
-                </BackButton>
+                <BackButton icon={''} text={'Voltar'} onClick={() => toHeroList()} />
 
-                <BackButton secondary onClick={() => toHome()}>
-                    HOME
-                </BackButton>
+                <BackButton secondary icon={''} text={'Home'} onClick={() => toHome()} />
             </Header>
 
             <HerosContainer>
@@ -56,10 +53,12 @@ export default function HeroDetails() {
                         </NameContainer>
                         <DescContainer>{location.state.desc}</DescContainer>
                     </InfosContainer>
-                    <DetailsContainer onClick={() => openNewTab(location.state.url)}>
-                        <div>
-                            Acesse outras informações
-                        </div>
+                    <DetailsContainer>
+                        {location.state.links.map(link => 
+                            <DetailsLink key={link.type} onClick={() => openNewTab(link.url)}>
+                                {link.text}
+                            </DetailsLink>
+                        )}
                     </DetailsContainer>
                 </HeroContainer>
             </HerosContainer>

@@ -4,11 +4,11 @@ import {
     BackIcon,
 } from './style'
 
-export default function BackButton({ onClick, children }) {
+export default function BackButton({ onClick, text, secondary }) {
     return (
-        <BackBtn onClick={onClick}>
+        <BackBtn secondary={secondary} onClick={onClick}>
             <BackIcon>&lt;</BackIcon>
-            {children}
+            {text}
         </BackBtn>
     )
 }

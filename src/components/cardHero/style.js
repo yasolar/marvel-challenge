@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const HerosContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 `;
 
 export const HeroContainer = styled.div`
     background-color: #fff;
-    margin-inline: 40px;
+    margin-left: 20px;
     margin-bottom: 20px;
     border: 1px solid grey;
     border-radius: 4px;
@@ -15,36 +16,37 @@ export const HeroContainer = styled.div`
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    width: 100%;
+    height: 150px;
+    width: 200px;
 `;
 
 export const InfosContainer = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-    padding-inline: 20px;
+    padding-top: 10px;
+    padding-inline: 10px;
 `;
 
 export const HeroImg = styled.img`
     background-color: lightgray;
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
-    margin-bottom: 20px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+`;
+
+export const HeroDiv = styled.div`
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
 `;
 
 export const NameContainer = styled.div`
-    font-size: 20px;
+    font-size: 13px;
     text-align: center;
-`;
-
-export const DescContainer = styled.div`
-    font-size: 15px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
 `;
 
 export const DetailsContainer = styled.div`
@@ -53,10 +55,10 @@ export const DetailsContainer = styled.div`
 
     div {
         cursor: pointer;
-        font-size: 15px;
+        font-size: 13px;
         text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 6px;
+        margin-bottom: 6px;
         transition: color 0.3s ease;
     }
 

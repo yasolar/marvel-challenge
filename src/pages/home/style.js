@@ -82,7 +82,7 @@ export const SearchInput = styled.input`
 	font-size: 14px; 
 `;
 
-export const SearchButton = styled.button`
+export const SearchBtn = styled.button`
 	cursor: pointer;
 	height: 100%;
 	width:100px; 

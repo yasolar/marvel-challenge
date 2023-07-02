@@ -15,7 +15,7 @@ import {
     WelcomeText,
     SearchContainer,
     SearchInput,
-    SearchButton,
+    SearchBtn,
     SideBContainer,
     FirstImage,
     SecondImage,
@@ -51,9 +51,9 @@ export default function Home() {
 
                 <SearchContainer>
                     <SearchInput value={name} onChange={e => setName(e.target.value)} placeholder='Digite o nome do(a) personagem' />
-                    <SearchButton onClick={() => toHeroList()}>
-                        BUSCAR
-                    </SearchButton>
+                    <SearchBtn onClick={() => toHeroList()}>
+                        Buscar
+                    </SearchBtn>
                 </SearchContainer>
             </SideAContainer>
             

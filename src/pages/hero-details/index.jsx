@@ -35,8 +35,13 @@ export default function HeroDetails() {
     }
 
     const openNewTab = (url) => {
-        window.open(url, '_blank');
+        window.open(url, '_blank')
     };
+
+    const fixText = (desc) => {
+        const regex = /<\/?[^>]+(>|$)/g
+        return desc.replace(regex, '')
+    }
 
     return (
         <>  <Header>
@@ -58,7 +63,7 @@ export default function HeroDetails() {
                         <NameContainer>
                             {location.state.name}
                         </NameContainer>
-                        <DescContainer>{location.state.desc}</DescContainer>
+                        <DescContainer>{fixText(location.state.desc)}</DescContainer>
                     </InfosContainer>
                     <DetailsContainer>
                         {location.state.links.map(link => 

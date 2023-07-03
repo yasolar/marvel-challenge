@@ -32,19 +32,13 @@ export default function HeroList() {
                     Veja os resultados da sua pesquisa sobre "{name}"
                 </TitleContainer>
             </Header>
-            {isLoading ?
-                <CardHero 
-                    infos={false}
-                    titleDetails={'Ver detalhes'}
-                    route={'/HeroDetails'}
-                />
-                :
-                <CardHero 
-                    infos={infos}
-                    titleDetails={'Ver detalhes'}
-                    route={'/HeroDetails'}
-                />
-            }
+            
+            <CardHero 
+                infos={infos}
+                isLoading={isLoading}
+                titleDetails={'Ver detalhes'}
+                route={'/HeroDetails'}
+            />
         </>
     )
 }

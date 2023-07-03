@@ -6,12 +6,13 @@ import {
     InfosContainer,
     HeroContainer,
     HeroImg,
-    HeroDiv,
     NameContainer,
     DetailsContainer,
+    HeroImgSkeleton,
+    TextSkeleton,
 } from './style'
 
-export default function CardHero({ infos, titleDetails, route }) {
+export default function CardHero({ infos, isLoading, titleDetails, route }) {
     const navigate = useNavigate()
 
     const sortByDescription = (a, b) => {
@@ -71,7 +72,39 @@ export default function CardHero({ infos, titleDetails, route }) {
 
     return (
         <HerosContainer>
-            {infos ?
+            {isLoading ?
+                <>
+                    <HeroContainer>
+                        <InfosContainer>
+                            <HeroImgSkeleton />
+                            <TextSkeleton />
+                        </InfosContainer>
+                        <DetailsContainer>
+                            <TextSkeleton />
+                        </DetailsContainer>
+                    </HeroContainer>
+
+                    <HeroContainer>
+                        <InfosContainer>
+                            <HeroImgSkeleton />
+                            <TextSkeleton />
+                        </InfosContainer>
+                        <DetailsContainer>
+                            <TextSkeleton />
+                        </DetailsContainer>
+                    </HeroContainer>
+
+                    <HeroContainer>
+                        <InfosContainer>
+                            <HeroImgSkeleton />
+                            <TextSkeleton />
+                        </InfosContainer>
+                        <DetailsContainer>
+                            <TextSkeleton />
+                        </DetailsContainer>
+                    </HeroContainer>
+                </>
+                :
                 infos.sort(sortByDescription).map(info =>
                     <HeroContainer key={info.id ? info.id : info.name}>
                         <InfosContainer>
@@ -87,50 +120,6 @@ export default function CardHero({ infos, titleDetails, route }) {
                         </DetailsContainer>
                     </HeroContainer>
                 )
-                :
-                <>
-                    <HeroContainer>
-                        <InfosContainer>
-                            <HeroDiv />
-                            <NameContainer>
-                                -
-                            </NameContainer>
-                        </InfosContainer>
-                        <DetailsContainer>
-                            <div>
-                                {titleDetails}
-                            </div>
-                        </DetailsContainer>
-                    </HeroContainer>
-
-                    <HeroContainer>
-                        <InfosContainer>
-                            <HeroDiv />
-                            <NameContainer>
-                                -
-                            </NameContainer>
-                        </InfosContainer>
-                        <DetailsContainer>
-                            <div>
-                                {titleDetails}
-                            </div>
-                        </DetailsContainer>
-                    </HeroContainer>
-
-                    <HeroContainer>
-                        <InfosContainer>
-                            <HeroDiv />
-                            <NameContainer>
-                                -
-                            </NameContainer>
-                        </InfosContainer>
-                        <DetailsContainer>
-                            <div>
-                                {titleDetails}
-                            </div>
-                        </DetailsContainer>
-                    </HeroContainer>
-                </>
             }
         </HerosContainer>
     )

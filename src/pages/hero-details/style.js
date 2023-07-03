@@ -7,7 +7,7 @@ export const HerosContainer = styled.div`
 
 export const HeroContainer = styled.div`
     background-color: #fff;
-    margin-inline: 40px;
+    margin-inline: 60px;
     margin-bottom: 20px;
     border: 1px solid grey;
     border-radius: 5px;
@@ -46,6 +46,7 @@ export const DescContainer = styled.div`
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-inline: 80px;
 `;
 
 export const DetailsContainer = styled.div`

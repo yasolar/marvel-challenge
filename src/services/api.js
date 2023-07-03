@@ -7,7 +7,6 @@ export async function GetHeros(name, setInfos, setIsLoading) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log('INFOS DATA: ', data.data.results)
             const infos = data.data.results
             setInfos(infos)
             setIsLoading(false)

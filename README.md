@@ -35,9 +35,8 @@ Abra o projeto no navegador pela seguinte url: http://localhost:3000
 ### 🛠️ Rodando a aplicação
 Hospedado em: https://marvel-challenge-yas.vercel.app/
 
-https://github.com/yasolar/marvel-challenge/assets/46655932/31f669b7-362f-4686-bd30-dcd4ee85813d
 
-
+https://github.com/yasolar/marvel-challenge/assets/46655932/f56137e9-7293-4474-a24a-9893ceca333e
 
 
 

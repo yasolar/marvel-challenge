@@ -24,12 +24,15 @@ Abra o projeto no navegador pela seguinte url: http://localhost:3000
 <p>
  <a>React</a> •
  <a>Hooks</a> •
+ <a>Styled Component</a> •
  <a>API</a> • 
- <a>Styled Component</a>
+ <a>Vercel</a>
 </p>
 
 ##
 ### 🛠️ Rodando a aplicação
+Hospedado em: https://marvel-challenge-yas.vercel.app/
+
 https://github.com/yasolar/marvel-challenge/assets/46655932/31f669b7-362f-4686-bd30-dcd4ee85813d
 
 

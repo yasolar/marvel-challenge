@@ -7,15 +7,10 @@
 ### 💿 Instalação
 Visite o seguinte site para criar uma chave privada e pública e ter acesso a mais informações sobre a API: https://developer.marvel.com/
 
-Na chamada da API é necessário ter uma hash que é a junção do timestamp, chave pública e privada. Com isso, é necessário criar na estrutura de pastas do projeto um arquivo JS chamado "*apiKey.js*" (caminho: "*src>services>apiKey.js*") com as informações da chave pública e privada. Segue exemplo abaixo:
+Na chamada da API é necessário ter uma hash que é a junção do timestamp, chave pública e privada. Com isso, é necessário criar na raiz do projeto um arquivo "*.env*" com as informações da chave pública e privada. Segue exemplo abaixo:
 ```
-const privateKey = 'informe aqui a chave privada'
-const publicKey = 'informe aqui a chave pública'
-
-export {
-    privateKey,
-    publicKey
-}
+REACT_APP_PRIVATE_KEY=**chavePrivada**
+REACT_APP_PUBLIC_KEY=**chavePublica**
 ```
 
 Rode o comando a seguir para instalar as dependências: `npm i`
@@ -35,7 +30,8 @@ Abra o projeto no navegador pela seguinte url: http://localhost:3000
 
 ##
 ### 🛠️ Rodando a aplicação
- // Vídeo em breve
+https://github.com/yasolar/marvel-challenge/assets/46655932/31f669b7-362f-4686-bd30-dcd4ee85813d
+
 
 
 
